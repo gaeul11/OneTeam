@@ -22,8 +22,8 @@
    <widget class="QTabWidget" name="kbo_tabWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>60</y>
+      <x>10</x>
+      <y>40</y>
       <width>1181</width>
       <height>651</height>
      </rect>
@@ -152,7 +152,7 @@ QTabBar::tab:hover {
 </string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tusu_rank">
        <attribute name="title">
@@ -227,33 +227,248 @@ QTabBar::tab:hover {
      <attribute name="title">
       <string>선수정보</string>
      </attribute>
-     <widget class="QTableWidget" name="player_Info">
+     <widget class="QScrollArea" name="scrollArea_1">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>1101</width>
-        <height>551</height>
+        <x>80</x>
+        <y>110</y>
+        <width>461</width>
+        <height>441</height>
        </rect>
       </property>
-      <property name="rowCount">
-       <number>1</number>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFFF;</string>
       </property>
-      <property name="columnCount">
-       <number>10</number>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
       </property>
-      <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="player_Scroll">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>442</width>
+         <height>439</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FFFFFF;</string>
+       </property>
+       <widget class="QLabel" name="player_week_rank_list">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>461</width>
+          <height>521</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>D2Coding</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+	background-color : #fffcfd;
+	border: 1px solid black;
+	color : #444444;
+	padding: 10px;
+</string>
+        </property>
+        <property name="text">
+         <string>player_info_rank_list</string>
+        </property>
+       </widget>
+      </widget>
      </widget>
+     <widget class="QLabel" name="player_info_rank">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>70</y>
+        <width>461</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>D2Coding</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+	background-color : #ebe1e6;
+	color : #595859;
+	font-size : 14;
+	padding-right:15px;</string>
+      </property>
+      <property name="text">
+       <string>순위-player_info_rank</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="playerInfo_Week">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>30</y>
+        <width>461</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>D2Coding</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+	background-color : #eb1085;
+	border: 2px solid blue;
+	color : white;
+	font-size : 14;
+	padding-right:10px;</string>
+      </property>
+      <property name="text">
+       <string>선수조회 순위- playerInfo_Week</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="playerInfo_total">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>30</y>
+        <width>461</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>D2Coding</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+	background-color : #eb1085;
+	border: 2px solid blue;
+	color : white;
+	font-size : 14;
+	padding-right:10px;</string>
+      </property>
+      <property name="text">
+       <string>선수조회 순위- playerInfo_total</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="player_info_totalRank">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>70</y>
+        <width>461</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>D2Coding</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+	background-color : #ebe1e6;
+	color : #595859;
+	font-size : 14;
+	padding-right:15px;</string>
+      </property>
+      <property name="text">
+       <string>순위-player_info_rank</string>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="scrollArea_2">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>110</y>
+        <width>461</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="player_Scroll_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>442</width>
+         <height>439</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="player_total_rank_list">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>461</width>
+          <height>521</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>D2Coding</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+	background-color : #fffcfd;
+	border: 1px solid black;
+	color : #444444;
+	padding: 10px;
+</string>
+        </property>
+        <property name="text">
+         <string>player_total_rank_list</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <zorder>scrollArea_1</zorder>
+     <zorder>player_info_rank</zorder>
+     <zorder>playerInfo_Week</zorder>
+     <zorder>player_info_totalRank</zorder>
+     <zorder>playerInfo_total</zorder>
+     <zorder>scrollArea_2</zorder>
     </widget>
     <widget class="QWidget" name="schedule_tab">
      <attribute name="title">
